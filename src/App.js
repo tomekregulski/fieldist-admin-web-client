@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
+import DataTable from './components/DataTable/DataTable';
+
 function App() {
   const [data, setData] = useState([]);
 
@@ -22,6 +24,7 @@ function App() {
           return <li key={index}>{item.first_name}</li>;
         })}
       </ul>
+      <DataTable />
     </div>
   );
 }
