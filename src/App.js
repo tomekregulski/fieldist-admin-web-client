@@ -1,31 +1,19 @@
-import React, { useState, useEffect } from 'react';
-import axios from 'axios';
+import React from 'react';
+import { Switch, Route } from 'react-router-dom';
 
-import DataTable from './components/DataTable/DataTable';
+import { Dashboard, Login, InvoiceScan, IntellyDataUpload } from './pages';
+import NavbarSwitch from './components/Navbar/NavbarSwitch';
+import ProtectedRoute from './ProtectedRoute';
 
 function App() {
-  const [data, setData] = useState([]);
-
-  useEffect(() => {
-    axios
-      .get('https://fieldist-back-end.herokuapp.com/api/users')
-      .then((response) => {
-        const res = response.data;
-        setData(res);
-      });
-  }, []);
-
   return (
-    <div>
-      <h1>Welcome to the Fieldist Admikn Web App</h1>
-      <p>These are the names of current users:</p>
-      <ul>
-        {data.map((item, index) => {
-          return <li key={index}>{item.first_name}</li>;
-        })}
-      </ul>
-      <DataTable />
-    </div>
+    <>
+      <NavbarSwitch />
+      <Switch>
+        <ProtectedRoute exact path={'/'} component={Dashboard} />
+        <Route exact path='/login' component={Login} />
+      </Switch>
+    </>
   );
 }
 
