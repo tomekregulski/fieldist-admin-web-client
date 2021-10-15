@@ -22,10 +22,7 @@ export default function DataTable() {
 
   useEffect(() => {
     axios
-      .get(
-        // 'https://fieldist-back-end.herokuapp.com/api/reports'
-        'http://localhost:5001/api/reports'
-      )
+      .get('https://fieldist-back-end.herokuapp.com/api/reports')
       .then((response) => {
         const res = response.data;
         setData(res);
@@ -58,7 +55,9 @@ export default function DataTable() {
             Toolbar: CustomToolbar,
           }}
         />
-      ) : null}
+      ) : (
+        <p style={{ textAlign: 'center' }}>There is no data to retrieve.</p>
+      )}
     </div>
   );
 }
