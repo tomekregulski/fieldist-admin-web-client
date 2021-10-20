@@ -1,5 +1,6 @@
-import React, { useEffect, useState } from 'react';
-import axios from 'axios';
+import React, { useEffect, useState, useContext } from 'react';
+
+import { DataContext } from '../../context/DataContext';
 
 import {
   DataGrid,
@@ -16,19 +17,12 @@ function CustomToolbar() {
 }
 
 export default function DataTable() {
-  const [data, setData] = useState([]);
+  const { filteredData } = useContext(DataContext);
+
+  const [data, setData] = filteredData;
+
   const [rows, setRows] = useState([]);
   const [columns, setColumns] = useState([]);
-
-  useEffect(() => {
-    axios
-      .get('https://fieldist-back-end.herokuapp.com/api/reports')
-      .then((response) => {
-        const res = response.data;
-        setData(res);
-        console.log(res);
-      });
-  }, []);
 
   useEffect(() => {
     if (Object.keys(data).length) {
