@@ -42,7 +42,7 @@ const TableFilter = (props) => {
   return (
     <div>
       <Button
-        style={{ display: 'block', margin: '0 auto 40px' }}
+        style={{ display: 'block', margin: '0 auto' }}
         onClick={handleOpen}
       >
         {props.action}

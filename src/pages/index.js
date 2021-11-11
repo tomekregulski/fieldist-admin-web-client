@@ -1,4 +1,15 @@
-import Dashboard from './Dashboard';
+import RawDataView from './RawDataView';
 import Login from './Login';
+import PhotoGalleryView from './PhotoGalleryView';
+import TabbedDashboard from './MainViewTabs';
+import VisualizedDataView from './VisualizedDataView';
+import MainView from './MainView';
 
-export { Dashboard, Login };
+export {
+  RawDataView,
+  Login,
+  PhotoGalleryView,
+  TabbedDashboard,
+  VisualizedDataView,
+  MainView,
+};
