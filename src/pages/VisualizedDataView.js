@@ -2,7 +2,7 @@ import React from 'react';
 
 const VisualizedDataView = () => {
   return (
-    <div>
+    <div style={{ textAlign: 'center' }}>
       <p>Coming Soon - Visualized Data</p>
     </div>
   );

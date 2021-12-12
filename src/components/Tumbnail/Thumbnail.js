@@ -11,13 +11,11 @@ const style = {
   top: '50%',
   left: '50%',
   transform: 'translate(-50%, -50%)',
-  // width: '100%',
   bgcolor: 'background.paper',
   border: '2px solid #000',
   boxShadow: 24,
   p: 4,
   overflow: 'scroll',
-  maxHeight: '95vh',
 };
 
 const Thumbnail = (props) => {
@@ -30,23 +28,18 @@ const Thumbnail = (props) => {
   return (
     <div
       style={{
-        width: '200px',
-        height: '200px',
-        backgroundPosition: 'center center',
-        backgroundRepeat: 'no-repeat',
-        overflow: 'hidden',
+        margin: '10px',
         padding: '10px',
+        display: 'block',
+        overflow: 'hidden',
+        height: '200px',
+        width: '200px',
       }}
     >
       <img
         style={{
-          width: '200px',
-          // height: '200px',
-          backgroundPosition: 'center center',
-          backgroundRepeat: 'no-repeat',
-          // minHeight: '100%',
-          // minWidth: '100%',
-          // opacity: '0',
+          display: 'block',
+          height: '50%',
         }}
         src={props.photo}
         alt='event photo'
@@ -59,9 +52,10 @@ const Thumbnail = (props) => {
         aria-describedby='modal-modal-description'
       >
         <Box sx={style}>
-          <div>
+          <div style={{ maxWidth: '600px' }}>
             <img
               style={{
+                width: '100%',
                 backgroundPosition: 'center center',
                 backgroundRepeat: 'no-repeat',
               }}

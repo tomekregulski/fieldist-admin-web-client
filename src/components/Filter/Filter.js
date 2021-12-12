@@ -110,18 +110,22 @@ function Filter() {
       >
         <MenuItem>
           <ListItemIcon>
-            <FilterSelect data={['hello', 'hello']} />
+            <FilterSelect
+              label='Brand'
+              data={['placeholder', 'functionality', 'coming soon']}
+            />
           </ListItemIcon>
           <ListItemIcon>
-            <button onClick={() => handleFilterSelect(['store', 'test'])}>
-              test
-            </button>
+            <FilterSelect
+              label='Field Rep'
+              data={['placeholder', 'functionality', 'coming soon']}
+            />
           </ListItemIcon>
           <ListItemIcon>
-            <FilterSelect data={['hello', 'hello']} />
-          </ListItemIcon>
-          <ListItemIcon>
-            <FilterSelect data={['hello', 'hello']} />
+            <FilterSelect
+              label='Region'
+              data={['placeholder', 'functionality', 'coming soon']}
+            />
           </ListItemIcon>
         </MenuItem>
       </Menu>
