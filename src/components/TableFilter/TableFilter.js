@@ -2,8 +2,10 @@ import React, { useState, useContext } from 'react';
 
 import { DataContext } from '../../context/DataContext';
 
+import Button from '../Button/Button';
+
 import Box from '@mui/material/Box';
-import Button from '@mui/material/Button';
+// import Button from '@mui/material/Button';
 import Modal from '@mui/material/Modal';
 import FormSelect from '../Forms/FormSelect';
 
@@ -42,11 +44,11 @@ const TableFilter = (props) => {
   return (
     <div>
       <Button
-        style={{ display: 'block', margin: '0 auto' }}
-        onClick={handleOpen}
-      >
-        {props.action}
-      </Button>
+        display='block'
+        margin='0 auto'
+        callback={handleOpen}
+        label='SELECT A BRAND'
+      />
       <Modal
         open={open}
         onClose={handleClose}

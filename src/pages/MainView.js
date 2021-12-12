@@ -14,11 +14,11 @@ const MainView = () => {
     <div style={{ marginTop: '80px' }}>
       <p style={{ textAlign: 'center' }}>
         Welcome Admin! Please choose a brand to get started. Once the data
-        loads, you can use the tabs to change views, and the filter menu to get
-        more specific.
+        loads, you can use the tabs to change views, and we are working on a
+        filter menu to give you more control.
       </p>
-      <div>
-        <TableFilter action={'Choose a Brand'} />
+      <div style={{ marginBottom: '20px' }}>
+        <TableFilter />
       </div>
       <div>{selectedBrand !== '' && <MainViewTabs />}</div>
     </div>

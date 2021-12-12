@@ -10,16 +10,21 @@ const PhotoGalleryView = () => {
   const [data, setData] = filteredData;
 
   return (
-    <div>
+    <div style={{ textAlign: 'center' }}>
+      {data.length === 0 && (
+        <div>
+          <p>No photos to display</p>
+        </div>
+      )}
       <div style={{ display: 'flex' }}>
-        {data.length &&
+        {data.length > 0 &&
           data.map((entry) => {
             return entry.photos.map((photo, index) => {
               // eslint-disable-next-line jsx-a11y/img-redundant-alt
               return <Thumbnail key={index} photo={photo} data={entry} />;
             });
           })}
-        {data.length &&
+        {data.length > 0 &&
           data.map((entry) => {
             return entry.expenses.map((expense, index) => {
               // eslint-disable-next-line jsx-a11y/img-redundant-alt

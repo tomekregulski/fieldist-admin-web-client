@@ -20,7 +20,6 @@ export default function DataTable() {
   const { filteredData } = useContext(DataContext);
 
   const [data, setData] = filteredData;
-
   const [rows, setRows] = useState([]);
   const [columns, setColumns] = useState([]);
 
@@ -40,7 +39,7 @@ export default function DataTable() {
   }, [data, setData]);
 
   return (
-    <div style={{ height: 300, width: '100%' }}>
+    <div style={{ height: 400, width: '100%' }}>
       {columns.length ? (
         <DataGrid
           rows={rows}

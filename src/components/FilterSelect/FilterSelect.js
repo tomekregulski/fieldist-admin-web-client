@@ -5,8 +5,6 @@ import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
 
 export default function FilterSelect(props) {
-  console.log(props.data);
-
   return (
     <>
       <FormControl
@@ -14,7 +12,7 @@ export default function FilterSelect(props) {
         style={{ marginRight: '30px' }}
         variant='standard'
       >
-        <InputLabel>Brand</InputLabel>
+        <InputLabel>{props.label}</InputLabel>
         <Select
           style={{ width: '130px' }}
           labelId='brandLabel'
