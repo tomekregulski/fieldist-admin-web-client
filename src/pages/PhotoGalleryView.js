@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from 'react';
+import React, { useContext } from 'react';
 
 import { DataContext } from '../context/DataContext';
 
@@ -7,6 +7,7 @@ import Thumbnail from '../components/Tumbnail/Thumbnail';
 const PhotoGalleryView = () => {
   const { filteredData } = useContext(DataContext);
 
+  // eslint-disable-next-line no-unused-vars
   const [data, setData] = filteredData;
 
   return (

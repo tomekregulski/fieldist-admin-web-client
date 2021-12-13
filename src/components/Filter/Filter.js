@@ -23,9 +23,12 @@ const UserButton = styled(Button)({
 function Filter() {
   const { filterArray, brandList, selectBrand } = useContext(DataContext);
 
+  // eslint-disable-next-line no-unused-vars
   const [brands, setBrands] = brandList;
+  // eslint-disable-next-line no-unused-vars
   const [selectedBrand, setSelectedBrand] = selectBrand;
 
+  // eslint-disable-next-line no-unused-vars
   const [filters, setFilters] = filterArray;
   const [anchorEl, setAnchorEl] = useState(null);
   const [width, setWidth] = React.useState(window.innerWidth);
@@ -111,6 +114,7 @@ function Filter() {
         <MenuItem>
           <ListItemIcon>
             <FilterSelect
+              onChange={() => handleFilterSelect}
               label='Brand'
               data={['placeholder', 'functionality', 'coming soon']}
             />

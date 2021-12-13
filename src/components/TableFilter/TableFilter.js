@@ -24,6 +24,7 @@ const style = {
 };
 
 const TableFilter = (props) => {
+  // eslint-disable-next-line no-unused-vars
   const { brandList, filteredData, selectBrand } = useContext(DataContext);
 
   // eslint-disable-next-line no-unused-vars
