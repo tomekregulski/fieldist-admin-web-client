@@ -2,11 +2,11 @@ import React, { useEffect, useState, useContext } from 'react';
 
 import { DataContext } from '../../context/DataContext';
 
-import DownloadCsv from '../DownloadCsv/DownloadCsv';
 import './Table.css';
 
 const baseCols = ['id', 'date', 'time', 'location', 'user_name'];
 
+// eslint-disable-next-line no-unused-vars
 const useSortableData = (items, config = null) => {
   const [sortConfig, setSortConfig] = React.useState(config);
 
@@ -44,6 +44,7 @@ const useSortableData = (items, config = null) => {
 const Table = (props) => {
   const { filteredData } = useContext(DataContext);
 
+  // eslint-disable-next-line no-unused-vars
   const [data, setData] = filteredData;
   const [rows, setRows] = useState([]);
   const [columns, setColumns] = useState([]);

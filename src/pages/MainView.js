@@ -3,23 +3,19 @@ import React, { useContext } from 'react';
 import { DataContext } from '../context/DataContext';
 import MainViewTabs from './MainViewTabs';
 
-import TableFilter from '../components/TableFilter/TableFilter';
-
 const MainView = () => {
   const { selectBrand } = useContext(DataContext);
 
+  // eslint-disable-next-line no-unused-vars
   const [selectedBrand, setSelectedBrand] = selectBrand;
 
   return (
-    <div style={{ marginTop: '80px' }}>
-      <p style={{ textAlign: 'center' }}>
-        Welcome Admin! Please choose a brand to get started. Once the data
-        loads, you can use the tabs to change views, and we are working on a
-        filter menu to give you more control.
+    <div style={{ marginTop: '60px' }}>
+      <p style={{ textAlign: 'center', marginBottom: '40px' }}>
+        Welcome Admin! Please choose a brand from the button above to get
+        started. Once the data loads, you can use the tabs below to change
+        views.
       </p>
-      <div style={{ marginBottom: '20px' }}>
-        <TableFilter />
-      </div>
       <div>{selectedBrand !== '' && <MainViewTabs />}</div>
     </div>
   );

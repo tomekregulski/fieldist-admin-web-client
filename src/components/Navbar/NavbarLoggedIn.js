@@ -7,7 +7,7 @@ import styles from './NavStyles';
 import image from '../../images/intelly_logo.png';
 
 import UserMenu from '../UserMenu/UserMenu';
-import Filter from '../Filter/Filter';
+import TableFilter from '../TableFilter/TableFilter';
 
 const NavbarLoggedIn = (props) => {
   const { user } = useContext(AuthContext);
@@ -28,7 +28,7 @@ const NavbarLoggedIn = (props) => {
   return (
     <nav className={classes.nav}>
       <div className={classes.navLinks}>
-        <Filter />
+        <TableFilter />
         <a href={`https://gallant-wing-415919.netlify.app/?${query.token}`}>
           <img className={classes.logo} src={image} alt='Intelly' />
         </a>

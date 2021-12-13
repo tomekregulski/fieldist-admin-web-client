@@ -8,6 +8,7 @@ export const DataProvider = (props) => {
   const [brands, setBrands] = useState([]);
   const [selectedBrand, setSelectedBrand] = useState('');
   const [data, setData] = useState([]);
+  // eslint-disable-next-line no-unused-vars
   const [filteredData, setFilteredData] = useState([]);
   const [filters, setFilters] = useState([]);
 

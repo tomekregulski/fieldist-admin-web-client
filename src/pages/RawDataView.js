@@ -1,7 +1,5 @@
 import React from 'react';
 
-import DataTable from '../components/DataTable/DataTable';
-
 import Table from '../components/Table/Table';
 
 const RawDataView = () => {
