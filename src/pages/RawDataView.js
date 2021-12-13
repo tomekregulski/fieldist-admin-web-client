@@ -1,13 +1,13 @@
-import React, { useContext } from 'react';
-
-import { DataContext } from '../context/DataContext';
+import React from 'react';
 
 import DataTable from '../components/DataTable/DataTable';
+
+import Table from '../components/Table/Table';
 
 const RawDataView = () => {
   return (
     <div style={{ marginTop: '20px' }}>
-      <DataTable />
+      <Table />
     </div>
   );
 };
