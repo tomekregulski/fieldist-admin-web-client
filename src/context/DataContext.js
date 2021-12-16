@@ -12,15 +12,6 @@ export const DataProvider = (props) => {
   const [filteredData, setFilteredData] = useState([]);
   const [filters, setFilters] = useState([]);
 
-  /*
-  Location, Rep Name, Campaign, Brand
-  First select brand to receive base data
-  Populate filter menus with all options based on brand selection
-  Then allow client-side filtering by Location and Rep, eventually campaign
-  Integrate Date range/selection once above is already in place
-  Eventually fully dynamic, i.e. search rep across brands, etc.
-  */
-
   useEffect(() => {
     setBrands([]);
     axios
